@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mall</title>
+  <link rel="stylesheet" href="./CSS/Mall.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+  <div class="banner">
+    <img src="./IMG/rough_cart-01@2x.png" alt="">
+  </div>
+
+  <main>
+    <!-- 選擇區塊 -->
+    <div class="choose_button">
+      <select name="" id="">
+        <option value="Supplies.html">用品</option>
+        <option value="">食品</option>
+        <option value="">服飾</option>
+        <option value="Simulation.html">虛擬試衣間</option>
+        <option value="customer">客製化商品</option>
+      </select>
+
+      <div class="search_btn">
+        <img src="./IMG/search@2x.png" alt="">
+      </div>
+    </div>
+
+
+    <div class="another">
+      <!-- 客製品項區塊 -->
+      <div class="choose_items">
+        <p>STEP1 請選擇商品</p>
+        <div class="items_block">
+          <div class="items">
+            <p>馬克杯</p>
+            <img class="cup" src="./IMG/cup@2x.png" alt="">
+            <div class="color_btn">
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+            </div>
+            <button>加入</button>
+          </div>
+
+          <div class="items">
+            <p>棒球帽</p>
+            <img class="cap" src="./IMG/cap@2x.png" alt="">
+            <div class="color_btn">
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+            </div>
+            <button>加入</button>
+          </div>
+
+          <div class="items">
+            <p>T恤</p>
+            <img class="T-shirt" src="./IMG/T-shirt@2x.png" alt="">
+            <div class="color_btn">
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+            </div>
+            <button>加入</button>
+          </div>
+
+          <div class="items">
+            <p>環保袋</p>
+            <img class="bag" src="./IMG/bag@2x.png" alt="">
+            <div class="color_btn">
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+              <div class="box"></div>
+            </div>
+            <button>加入</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 上傳照片區塊 -->
+      <div class="choose_photo">
+        <p>STEP2 請上傳寵物照片</p>
+        <div class="photo_block">
+          <div class="upload">
+            <div class="text_block">
+              <h5>圖檔格式:JPG/PNG<br>檔案大小限制:1M</h5>
+            </div>
+          </div>
+
+          <div class="simulation">
+            <div class="result">
+              <h1>模擬圖</h1>
+            </div>
+            <img src="./IMG/simulation@2x.png" alt="">
+          </div>
+        </div>
+
+        <div class="btn_icon">
+          <div class="upload_block">
+            <label>
+              <!--利用label特性，只要包住input，點label的範圍就會點到input-->
+              <input type="file">
+              <div class="upload_btn">
+                <img src="./IMG/Icon_upload@2x.png" alt="">
+              </div>
+            </label>
+          </div>
+
+          <div class="buy_block">
+            <div class="buy_btn">
+              <img src="./IMG/Icon_shopping@2x.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <script>
+    $('select').on('change', function (e) {
+      if (this.value !== '') {//如果當下值不等於空字串，則another底下的div全部隱藏，並載入當前值得value
+        $('.another div').css('display', 'none');
+        $('.another').load(e.target.value);
+      } else {
+        $('.another div').css('display', 'none');//若等於空字串，another底下的div全部隱藏
+      }
+    })
+  </script>
+</body>
+
+</html>

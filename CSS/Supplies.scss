@@ -1,0 +1,101 @@
+@import url(reset.css);
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Noto Sans";
+  font-weight: bold;
+  background-image: url(../IMG/dog_foot_big@2x.png);
+  font-size: 0;//取消圖片底層空白
+}
+
+h1{
+  font-size: 30px;
+}
+h2{
+  font-size: 27px;
+}
+h3{
+  font-size: 24px;
+  font-weight: bold;
+}
+h4{
+  font-size: 21px;
+  font-weight: bold;
+}/*21.6px*/
+h5{
+  font-size: 21px;
+}
+p{
+  font-size: 19px;
+}
+button{
+  font-size: 16px;
+}/*15.6px*/
+
+
+.banner {
+  width: 1920px;
+  .banner img {
+    width: 1920px;
+  }
+}
+
+main{
+  width: 1740px;
+  margin: 0 auto;
+}
+
+/*商品區塊*/
+
+.supplies_block{
+  margin-top: 29px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .items{
+    border-radius: 105px;
+    margin-bottom: 55px;
+    position: relative;
+    background-color: #000000;
+    img{
+      width: 520px;
+    }
+    .info_block{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+      color: #FFFFFF;
+      display: none;
+    }
+    .view_btn{
+      width: 150px;
+      height: 55px;
+      background-color: #FFC857;
+      border-radius: 100px;
+      cursor: pointer;
+      margin: 0 auto;
+    }
+  }
+
+  .items:hover .info_block{
+    display: block;
+  }
+  .items:hover img{
+    transition: 0.2s;
+    opacity: 0.5;
+  }
+
+  h4{
+    font-size: 36px;
+    line-height: 60px;
+  }
+  h3{
+    font-size: 40px;
+    line-height: 55px;
+  }
+}
